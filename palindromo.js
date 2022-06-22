@@ -1,14 +1,14 @@
-// function isPalindrome(word) {
-//     return word == word.split('').reverse().join('');
-// }
-
 function isPalindrome(word) {
-    for (let i = 0; i < word.length / 2; i++) {
-        if (word[i] !== word[word.length - 1 - i]) {
-            return false;
+    let i = 0;
+    let check = true;
+    while ((i != word.length / 2) && (check)) {
+        if (word[i] != word[word.length - 1 - i]) {
+            check = false;
         }
+        i++;
     }
-    return true;
+
+    return check;
 }
 
 const userWord = prompt('inserire una parola');
